@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/images/buttons/return.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/buttons/home.png" type="Texture" id=2]
+[ext_resource path="res://UI/BaseScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 64
+font_data = ExtResource( 4 )
+
+[node name="GameoverScreen" instance=ExtResource( 3 )]
+
+[node name="Label" parent="MarginContainer/VBoxContainer" index="0"]
+text = "Game Over"
+
+[node name="Nilai" type="VBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
+margin_top = 237.0
+margin_right = 440.0
+margin_bottom = 397.0
+
+[node name="Best" type="Label" parent="MarginContainer/VBoxContainer/Nilai" index="0"]
+margin_right = 440.0
+margin_bottom = 78.0
+custom_fonts/font = SubResource( 1 )
+text = "Best : 0"
+align = 1
+
+[node name="Score" type="Label" parent="MarginContainer/VBoxContainer/Nilai" index="1"]
+margin_top = 82.0
+margin_right = 440.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 2 )
+text = "Score : 0"
+align = 1
+
+[node name="Buttons" parent="MarginContainer/VBoxContainer" index="2"]
+margin_top = 547.0
+margin_bottom = 547.0
+
+[node name="Buttons2" parent="MarginContainer/VBoxContainer" index="3"]
+margin_top = 697.0
+margin_bottom = 797.0
+
+[node name="Home" type="TextureButton" parent="MarginContainer/VBoxContainer/Buttons2" index="0" groups=[
+"buttons",
+]]
+margin_left = 95.0
+margin_right = 195.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 2 )
+
+[node name="Play" type="TextureButton" parent="MarginContainer/VBoxContainer/Buttons2" index="1" groups=[
+"buttons",
+]]
+margin_left = 245.0
+margin_right = 345.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 1 )
